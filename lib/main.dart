@@ -45,12 +45,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
               )
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 5),
             Text(
               'My hobby is learning programming and developing mobile applications. I enjoy learning new technologies, especially Flutter and Dart. In my free time, I practice coding and try to build new projects. Programming helps me improve my creativity and problem-solving skills. I want to become a professional Flutter developer in the future. My hobby gives me joy and motivates me to learn something new every day.',
-              style: TextStyle(fontSize: 16, color: Colors.white),
+              style: GoogleFonts.oswald(fontSize: 16, color: Colors.white),
             ),
+            SizedBox(height: 10),
             Image.asset('assets/logo.png', height: 200, width: 200),
+            SizedBox(height: 30,),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
