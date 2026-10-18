@@ -1,6 +1,6 @@
-import 'package:bd_calling_batch2/View/Studen_protal_view/student_home_screens.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:bd_calling_batch2/View/Studen_protal_view/student_home_screens.dart';
+import 'package:bd_calling_batch2/View/Studen_protal_view/profile_view_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,48 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Flutter Demo', home: StudentHomeScreens());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      initialRoute: StudentHomeScreens.name,
+
+      routes: {
+        StudentHomeScreens.name: (context) =>
+            const StudentHomeScreens(),
+
+        ProfileScreen.name: (context) =>
+            const ProfileScreen(),
+      },
+    );
   }
 }
+// import 'package:bd_calling_batch2/View/Studen_protal_view/profile_view_screen.dart';
+// import 'package:bd_calling_batch2/View/Studen_protal_view/student_home_screens.dart';
+
+// import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
+//
+// import 'View/Studen_protal_view/student_home_screens.dart';
+//
+// void main() {
+//   runApp(const MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         title: 'Flutter Demo',
+//         initialRoute: StudentHomeScreens.name,
+//       routes: {
+//         StudentHomeScreens.name: (context) => const StudentHomeScreens(),
+//         ProfileViewScreen.name: (context) => const ProfileViewScreen(),
+//       },
+//     );
+//   }
+// }
 
 // class MyHomePage extends StatefulWidget {
 //   @override

@@ -1,9 +1,12 @@
 import 'package:bd_calling_batch2/View/Studen_protal_view/Widget/class_card.dart';
 import 'package:bd_calling_batch2/View/Studen_protal_view/Widget/header_section.dart';
 import 'package:bd_calling_batch2/View/Studen_protal_view/Widget/item.dart';
+import 'package:bd_calling_batch2/View/Studen_protal_view/profile_view_screen.dart';
 import 'package:flutter/material.dart';
 
 class StudentHomeScreens extends StatelessWidget {
+  static const String name = '/student_home';
+
   const StudentHomeScreens({super.key});
 
   @override
@@ -40,21 +43,19 @@ class StudentHomeScreens extends StatelessWidget {
                     ),
                     MenuItem(
                       title: 'Profile',
-                      icon: Icons.article,
+                      icon: Icons.person,
                       color: Colors.red,
                       onTap: () {
-
+                        Navigator.pushNamed(context, ProfileScreen.name);
                       },
                     ),
-
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
                       'Upcoming Classes',
@@ -78,34 +79,29 @@ class StudentHomeScreens extends StatelessWidget {
                 ),
               ),
               ClassCard(
-                  icon: Icons.desktop_mac_outlined,
-                  title: 'Flutter App development',
-                  room: '150',
-                  time: '11:00 am - 12:00 am',
-                  iconColor: Colors.indigo,
-                  backgroundColor: Colors.blue.shade50
+                icon: Icons.desktop_mac_outlined,
+                title: 'Flutter App development',
+                room: '150',
+                time: '11:00 am - 12:00 am',
+                iconColor: Colors.indigo,
+                backgroundColor: Colors.blue.shade50,
               ),
               ClassCard(
-                  icon: Icons.code_off,
-                  title: 'Database Systems',
-                  room: '140',
-                  time: '11:00 am - 12:00 am',
-                  iconColor: Colors.red,
-                  backgroundColor: Colors.red.shade50
+                icon: Icons.code_off,
+                title: 'Database Systems',
+                room: '140',
+                time: '11:00 am - 12:00 am',
+                iconColor: Colors.red,
+                backgroundColor: Colors.red.shade50,
               ),
               ClassCard(
-                  icon: Icons.menu_book,
-                  title: 'Web design',
-                  room: '158',
-                  time: '11:00 am - 12:00 am',
-                  iconColor: Colors.green,
-                  backgroundColor: Colors.green.shade50
+                icon: Icons.menu_book,
+                title: 'Web design',
+                room: '158',
+                time: '11:00 am - 12:00 am',
+                iconColor: Colors.green,
+                backgroundColor: Colors.green.shade50,
               ),
-
-
-
-
-
             ],
           ),
         ),
