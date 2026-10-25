@@ -27,9 +27,14 @@ class StudentApp extends StatelessWidget {
         ),
         actions: [
           IconButton(onPressed: (){
+            // Get.snackbar(
+            //   backgroundColor: Colors.green.shade100,
+            //     snackPosition: SnackPosition.BOTTOM,
+            //     "login",'success');
             SettingsDialog.show(title: 'Alart box', content: 'Do you want to navigate in settings');
           },
-              icon: Icon(Icons.settings))
+              icon: Icon(Icons.settings)
+          )
         ],
       ),
       body: SafeArea(
@@ -93,21 +98,7 @@ class StudentApp extends StatelessWidget {
               const SizedBox(height: 28),
 
               // Logout Button
-              SizedBox(
-                width: double.infinity,
-                height: 58,
-                child: SignInButton(
-                  Buttons.google,
-
-                  onPressed: () {
-                    Get.snackbar(
-                      snackPosition: SnackPosition.BOTTOM,
-                      'Login',
-                      'login success',
-                    );
-                  },
-                ),
-              ),
+              ElevatedButton(onPressed: (){}, child: Text('View Profile'))
             ],
           ),
         ),
