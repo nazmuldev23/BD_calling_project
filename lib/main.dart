@@ -1,6 +1,8 @@
+import 'package:bd_calling_batch2/View/Studen_protal_view/studentApp.dart';
 import 'package:flutter/material.dart';
 import 'package:bd_calling_batch2/View/Studen_protal_view/student_home_screens.dart';
 import 'package:bd_calling_batch2/View/Studen_protal_view/profile_view_screen.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,17 +13,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
 
-      initialRoute: StudentHomeScreens.name,
+      initialRoute: StudentApp.name,
 
       routes: {
-        StudentHomeScreens.name: (context) =>
-            const StudentHomeScreens(),
+        StudentHomeScreens.name: (context) => const StudentHomeScreens(),
 
-        ProfileScreen.name: (context) =>
-            const ProfileScreen(),
+        ProfileScreen.name: (context) => const ProfileScreen(),
+        StudentApp.name: (context)=> const StudentApp(),
+
+
       },
     );
   }
