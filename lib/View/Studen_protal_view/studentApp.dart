@@ -1,5 +1,6 @@
 import 'package:bd_calling_batch2/View/Studen_protal_view/Widget/alart_dialog.dart';
 import 'package:bd_calling_batch2/View/Studen_protal_view/Widget/profile_info.dart';
+import 'package:bd_calling_batch2/View/Studen_protal_view/student_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -26,15 +27,19 @@ class StudentApp extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
-          IconButton(onPressed: (){
-            // Get.snackbar(
-            //   backgroundColor: Colors.green.shade100,
-            //     snackPosition: SnackPosition.BOTTOM,
-            //     "login",'success');
-            SettingsDialog.show(title: 'Alart box', content: 'Do you want to navigate in settings');
-          },
-              icon: Icon(Icons.settings)
-          )
+          IconButton(
+            onPressed: () {
+              // Get.snackbar(
+              //   backgroundColor: Colors.green.shade100,
+              //     snackPosition: SnackPosition.BOTTOM,
+              //     "login",'success');
+              SettingsDialog.show(
+                title: 'Alart box',
+                content: 'Do you want to navigate in settings',
+              );
+            },
+            icon: Icon(Icons.settings),
+          ),
         ],
       ),
       body: SafeArea(
@@ -98,7 +103,20 @@ class StudentApp extends StatelessWidget {
               const SizedBox(height: 28),
 
               // Logout Button
-              ElevatedButton(onPressed: (){}, child: Text('View Profile'))
+              SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.blue
+                  ),
+                  onPressed: () {
+                    Get.off(() =>  StudentProfile());
+                  },
+                  child: Text('View Profile'),
+                ),
+              ),
             ],
           ),
         ),

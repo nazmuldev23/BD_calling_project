@@ -1,4 +1,5 @@
 import 'package:bd_calling_batch2/View/Studen_protal_view/studentApp.dart';
+import 'package:bd_calling_batch2/View/Studen_protal_view/student_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:bd_calling_batch2/View/Studen_protal_view/student_home_screens.dart';
 import 'package:bd_calling_batch2/View/Studen_protal_view/profile_view_screen.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
 
         ProfileScreen.name: (context) => const ProfileScreen(),
         StudentApp.name: (context)=> const StudentApp(),
+        StudentProfile.name: (context) => const ProfileScreen(),
 
 
       },
