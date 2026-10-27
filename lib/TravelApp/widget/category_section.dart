@@ -11,7 +11,8 @@ class CategorySection extends StatefulWidget {
 }
 
 class _CategorySectionState extends State<CategorySection> {
-  String selectedCategory = 'Popular';
+
+  int selectedIndex = 0;
 
   final List<String> categories = [
     'All',
@@ -20,6 +21,7 @@ class _CategorySectionState extends State<CategorySection> {
     'Historical',
     'Forest',
   ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +37,10 @@ class _CategorySectionState extends State<CategorySection> {
 
           return CategoryButton(
             title: category,
-            isSelected: selectedCategory == category,
+            isSelected: selectedIndex == index,
             onTap: () {
               setState(() {
-                selectedCategory = category;
+                selectedIndex = index;
               });
             },
           );
